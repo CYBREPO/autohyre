@@ -21,14 +21,23 @@ $theme-blue: #ff2e17;
 // font-family: 'Raleway', sans-serif;
 // font-family: 'Ubuntu', sans-serif;
 
+.font-family-1 {
+    font-family: 'DM Serif Display', serif !important;
+}
+
+
 body {
     font-family: $body-family;
     color: #121214;
     background-image: url(illustration-hero.png);
     font-weight: 500;
+    font-size: 15px;
 }
 
 
+p {
+    font-weight: 400;
+}
 
 ul {
     padding: 0;
@@ -64,7 +73,7 @@ ul {
 ==================================================*/
 .heading {
     font-family: $heading-family;
-    font-size: 5em;
+    font-size: 6em;
 }
 
 .subheading {
@@ -93,11 +102,12 @@ ul {
 }
 
 .carousel-item {
-    img{
+    img {
         height: 100%;
         object-fit: cover;
         background-position: center;
     }
+
     .container {
         position: absolute;
         top: 0;
@@ -106,7 +116,7 @@ ul {
         bottom: 0;
         margin: auto;
         left: 0;
-      
+
     }
 }
 
@@ -456,6 +466,22 @@ $font-family_1: Goldman, cursive;
 
 }
 
+.right-hand-text {
+    .row {
+        max-width: unset;
+
+        .text-block {
+            left: unset !important;
+            right: 0 !important;
+        }
+
+        img {
+            margin-right: auto !important;
+            margin-left: unset !important;
+        }
+    }
+}
+
 
 
 .post-content {
@@ -573,4 +599,46 @@ $font-family_2: Raleway, Helvetica, sans-serif;
     object-fit: cover;
     object-position: bottom;
     margin-top: -30px;
+}
+
+
+.faq {
+    .accordion-item {
+        border-left: 0;
+        border-right: 0;
+
+        .accordion-button {
+            color: #121214;
+        }
+    }
+}
+
+.carbon-free-drive {
+    padding-top: 200px;
+    .right-column {
+        position: relative;
+        &::after{
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: #f4f4f4;
+            right: 200px;
+            top: -101px;
+            z-index: -1;
+        }
+        .section-heading {
+            font-size: 6em;
+            transform: translateX(-147px);
+        }
+
+        p {
+
+            mix-blend-mode: difference;
+            margin-left: -100px;
+            color: white;
+            font-size: 2em;
+
+        }
+    }
 }
