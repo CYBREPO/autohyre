@@ -1,13 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './style.scss'; 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import '~mdb-ui-kit/css/mdb.min.css';
-import * as mdb from 'mdb-ui-kit'; // lib
-import { Input } from 'mdb-ui-kit'; // module
-
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

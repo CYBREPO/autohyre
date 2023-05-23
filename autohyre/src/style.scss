@@ -35,7 +35,7 @@ $theme-blue: #ff2e17;
 body {
     font-family: $body-family;
     color: #121214;
-    background-image: url(../images/illustration-hero.png);
+    background-image: url(../src/images/illustration-hero.png);
     font-weight: 500;
     font-size: 15px;
 }
@@ -109,6 +109,121 @@ ul {
     }
 }
 
+
+
+
+/*================================================
+1 - navigation
+==================================================*/
+
+
+
+$color_1: #555;
+$color_2: #4e65ff;
+
+.navigation {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 120px;
+    height: 60px;
+    background: #fff;
+    transition: height 0.5s, width 0.5s;
+    transition-delay: 0s, 0.75s;
+    overflow: hidden;
+    z-index: 9;
+    width: 300px;
+
+
+    .menuToggle {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 32px;
+            height: 2px;
+            background: #555;
+            transform: translateY(-10px);
+            box-shadow: 0 10px #555;
+            transition: 0.5s;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 32px;
+            height: 2px;
+            background: #555;
+            transform: translateY(10px);
+            transition: 0.5s;
+        }
+    }
+}
+
+.navigation.active {
+    height: max-content;
+
+    .userBx {
+        width: calc(100% - 60px);
+        transition-delay: 0s;
+    }
+
+    .menuToggle {
+        &::before {
+            transform: translateY(0px) rotate(45deg);
+            box-shadow: 0 0 #555;
+        }
+
+        &::after {
+            transform: translateY(0px) rotate(-45deg);
+        }
+    }
+}
+
+.menu {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    li {
+        list-style: none;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+            font-size: 1em;
+            text-decoration: none;
+            color: $color_1;
+
+            &:hover {
+                color: $color_2;
+            }
+
+            ion-icon {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+
+
+//========================
+//======================
+//=================
 .carousel-item {
     img {
         height: 100%;
@@ -155,7 +270,7 @@ article {
 
 .gauto-promo-area {
     position: relative;
-    background: url(../images/cars.avif) no-repeat fixed 0 0/cover;
+    background: url(../src/images/cars.avif) no-repeat fixed 0 0/cover;
     z-index: 1;
     margin-top: 100px;
 }
@@ -293,7 +408,6 @@ $font-family_1: Goldman, cursive;
 
 .footer-top-area {
     padding: 50px 0;
-    background: url(../images/footer-bg.jpg) no-repeat scroll 0 0/cover;
     position: relative;
     z-index: 1;
 
@@ -525,12 +639,21 @@ $font-family_1: Goldman, cursive;
         }
     }
 }
-
+button.owl-dot {
+    background: no-repeat;
+    border: none;
+}
 
 ////////////////////
 $color_1: white;
 $font-family_1: Open-sans, sans-serif;
 $font-family_2: Raleway, Helvetica, sans-serif;
+
+.card-1 {background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://i1.wp.com/handluggageonly.co.uk/wp-content/uploads/2015/05/IMG_2813-s.jpg?w=1600&ssl=1');}
+
+.card-2 {background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1');}
+
+.card-3 {background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/03/Positano-Weather.jpg?w=1600&ssl=1');}
 
 .card {
     height: 250px;
@@ -595,7 +718,7 @@ $font-family_2: Raleway, Helvetica, sans-serif;
 
 .hosts {
 
-    background-image: url(../images/Vector7.png);
+    background-image: url(../src/images/Vector7.png);
     background-position: 43% center;
     background-repeat: no-repeat;
     background-size: 45%;
@@ -707,10 +830,10 @@ $font-family_2: Raleway, Helvetica, sans-serif;
     max-width: 940px;
     margin: auto;
     position: absolute;
+    z-index: 8;
     top: 80px;
     left: 0;
     right: 0;
-    z-index: 8;
 }
 
 .search-bar .form-group {
