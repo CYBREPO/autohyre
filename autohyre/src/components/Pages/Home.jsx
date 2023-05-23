@@ -1,22 +1,29 @@
 import React from 'react'
-
+import toyota from '../../images/toyota.jpg'
+import mercedes from '../../images/mercedes.jpg'
+import acura from '../../images/acura.jpg'
+import infiniti from '../../images/infiniti.jpg'
 const Home = () => {
   let database = [
     {
       name: 'Lexus/Toyota',
-      image: 'lexus',
+      image: require("../../images/toyota.jpg"),
+      url: '/toyota.html'
     },
     {
       name: 'Mercedes Benz/BMW',
-      image: 'Mercedes-Benz-CLA-651.jpg',
+      image: require("../../images/mercedes.jpg"),
+      url: '/mercedes.html'
     },
     {
       name: 'Acura/Honda',
-      image: 'honda.png',
+      image: require("../../images/acura.jpg"),
+      url: '/acura.html'
     },
     {
       name: 'Infiniti/Nissan',
-      image: 'nissan.jpg',
+      image: require("../../images/infiniti.jpg"),
+      url: '/infiniti.html'
     }
   ];
   let places = [
@@ -146,14 +153,14 @@ const Home = () => {
       <section className="mt-md-5 browsebymake">
         <div className="container">
           <b className="fs-4 d-block section-subheading">Browse by Make</b>
-
+          <a href="/pages/mercedes.html">aaaaaaaaaaaa</a>
           <div id="owl-demo-2" className="owl-carousel owl-theme py-3">
 
             {database.map(function (object, i) {
               return (<div className='projects-grid'>
                 <article className="thumbnail item">
-                  <a href="/rentbycar.html">
-                    <img src='../../images/{{}}' className="img-responsive" alt='' />
+                  <a href={object.url}>
+                    <img src={object.image} className="img-responsive" alt='' />
 
                     <div className="caption fw-bolder my-3">
                       {object.name}

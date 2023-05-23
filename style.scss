@@ -276,13 +276,26 @@ article {
     margin-top: 30px;
 }
 
+a {
+    text-decoration: none;
+}
 
+.caption {
+    color: black;
+}
 
 .browsebymake {
     img {
-        height: 112px;
+        height: 180px;
         object-fit: cover;
     }
+}
+
+.owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    background: none;
+    border: none;
 }
 
 /*================================================
@@ -793,4 +806,12 @@ button.gm-control-active.gm-fullscreen-control {
 
 .gmnoprint {
     display: none;
+}
+
+#feedback,
+#disclaimer-with-links,
+#faq,
+#top-cities,
+.seo-pages-thy8ee {
+    display: none !important;
 }

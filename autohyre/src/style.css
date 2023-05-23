@@ -4,13 +4,15 @@
     max-width: 93%;
   }
 }
+
 @media (min-width: 1200px) {
   .fs-1 {
     font-size: 3rem !important;
   }
 }
+
 .font-family-1 {
-  font-family: "DM Serif Display", serif !important;
+  font-family: 'DM Serif Display', serif !important;
 }
 
 body {
@@ -29,6 +31,7 @@ p {
 ul {
   padding: 0;
 }
+
 ul li {
   list-style-type: none;
 }
@@ -79,8 +82,9 @@ ul li {
 .bg-image {
   height: 70vh;
 }
+
 .bg-image .mask {
-  background-color: rgba(0, 0, 0, 0.168627451);
+  background-color: #0000002b;
 }
 
 /*================================================
@@ -93,57 +97,81 @@ ul li {
   width: 120px;
   height: 60px;
   background: #fff;
+  -webkit-transition: height 0.5s, width 0.5s;
   transition: height 0.5s, width 0.5s;
-  transition-delay: 0s, 0.75s;
+  -webkit-transition-delay: 0s, 0.75s;
+          transition-delay: 0s, 0.75s;
   overflow: hidden;
   z-index: 9;
   width: 300px;
 }
+
 .navigation .menuToggle {
   position: relative;
   width: 60px;
   height: 60px;
   background: #fff;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
+
 .navigation .menuToggle::before {
   content: "";
   position: absolute;
   width: 32px;
   height: 2px;
   background: #555;
-  transform: translateY(-10px);
-  box-shadow: 0 10px #555;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 10px #555;
+          box-shadow: 0 10px #555;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 .navigation .menuToggle::after {
   content: "";
   position: absolute;
   width: 32px;
   height: 2px;
   background: #555;
-  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .navigation.active {
+  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
+
 .navigation.active .userBx {
   width: calc(100% - 60px);
-  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
+
 .navigation.active .menuToggle::before {
-  transform: translateY(0px) rotate(45deg);
-  box-shadow: 0 0 #555;
+  -webkit-transform: translateY(0px) rotate(45deg);
+          transform: translateY(0px) rotate(45deg);
+  -webkit-box-shadow: 0 0 #555;
+          box-shadow: 0 0 #555;
 }
+
 .navigation.active .menuToggle::after {
-  transform: translateY(0px) rotate(-45deg);
+  -webkit-transform: translateY(0px) rotate(-45deg);
+          transform: translateY(0px) rotate(-45deg);
 }
 
 .menu {
@@ -152,21 +180,29 @@ ul li {
   padding: 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .menu li {
   list-style: none;
 }
+
 .menu li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   margin: 20px 0;
   font-size: 1em;
   text-decoration: none;
   color: #555;
 }
+
 .menu li a:hover {
   color: #4e65ff;
 }
+
 .menu li a ion-icon {
   font-size: 1.5em;
 }
@@ -177,6 +213,7 @@ ul li {
      object-fit: cover;
   background-position: center;
 }
+
 .carousel-item .container {
   position: absolute;
   top: 0;
@@ -190,9 +227,12 @@ ul li {
 article {
   background-color: #FFFFFF;
   border-radius: 8px;
-  box-shadow: 0 2px 4px 0 rgba(35, 31, 32, 0.2), 0 0 1px 0 rgba(35, 31, 32, 0.1);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(35, 31, 32, 0.2), 0 0 1px 0 rgba(35, 31, 32, 0.1);
+          box-shadow: 0 2px 4px 0 rgba(35, 31, 32, 0.2), 0 0 1px 0 rgba(35, 31, 32, 0.1);
   color: #231F20;
-  flex: 1 0 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   margin: 0 8px;
   overflow: hidden;
   position: relative;
@@ -230,6 +270,7 @@ article {
   padding-top: 150px;
   padding-bottom: 150px;
 }
+
 .promo-box-left img {
   max-width: 500px;
 }
@@ -246,6 +287,7 @@ article {
   right: 55%;
   width: 2030px;
   height: 100%;
+  -webkit-transform: skewX(45deg);
   transform: skewX(45deg);
   z-index: -1;
 }
@@ -258,6 +300,7 @@ article {
   right: 43%;
   width: 70px;
   height: 100%;
+  -webkit-transform: skewX(45deg);
   transform: skewX(45deg);
   z-index: -1;
 }
@@ -266,6 +309,7 @@ article {
   color: #fff;
   letter-spacing: 1px;
   margin-bottom: 15px;
+  -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   display: inline-block;
   text-transform: capitalize;
@@ -294,7 +338,7 @@ article {
 }
 
 .about-list ul {
-  -moz-columns: 2;
+  -webkit-columns: 2;
   columns: 2;
   padding: 0;
   margin-top: 10px;
@@ -336,6 +380,7 @@ article {
   position: relative;
   z-index: 1;
 }
+
 .footer-top-area:after {
   position: absolute;
   content: "";
@@ -350,11 +395,13 @@ article {
 .single-footer {
   clear: both;
 }
+
 .single-footer h3 {
   font-size: 17px;
   letter-spacing: 1px;
   margin-bottom: 30px;
-  transition: all 0.4s ease 0s;
+  -webkit-transition: all .4s ease 0s;
+  transition: all .4s ease 0s;
   display: block;
   text-transform: uppercase;
   font-family: Goldman, cursive;
@@ -362,6 +409,7 @@ article {
   position: relative;
   color: #ff2e17;
 }
+
 .single-footer > h3:after {
   position: absolute;
   content: "";
@@ -375,6 +423,7 @@ article {
 .quick-links {
   width: 45%;
 }
+
 .quick-links a {
   color: #231F20;
 }
@@ -386,17 +435,20 @@ article {
 .footer-address {
   margin-top: 30px;
 }
+
 .footer-address h3 {
   font-size: 17px;
   letter-spacing: 1px;
   margin-bottom: 30px;
-  transition: all 0.4s ease 0s;
+  -webkit-transition: all .4s ease 0s;
+  transition: all .4s ease 0s;
   display: block;
   text-transform: uppercase;
   font-family: Goldman, cursive;
   font-weight: 600;
   position: relative;
 }
+
 .footer-address h3:after {
   position: absolute;
   content: "";
@@ -419,6 +471,7 @@ article {
   border-radius: 5px;
   border: thin solid #3788db;
 }
+
 .newsletter_box form input {
   position: absolute;
   top: 0;
@@ -430,6 +483,7 @@ article {
   padding: 5px 10px;
   border-radius: 5px;
 }
+
 .newsletter_box form button {
   position: absolute;
   border: medium none;
@@ -449,6 +503,7 @@ article {
 .copyright p {
   text-transform: capitalize;
 }
+
 .copyright p i {
   color: #3788db;
   margin: 0 2px;
@@ -457,10 +512,12 @@ article {
 .footer-social ul {
   text-align: right;
 }
+
 .footer-social ul li {
   display: inline-block;
   margin-left: 10px;
 }
+
 .footer-social ul li a {
   display: block;
 }
@@ -468,11 +525,13 @@ article {
 .floaty-text {
   position: relative;
 }
+
 .floaty-text .row {
   max-width: 1000px;
   margin: auto;
   position: relative;
 }
+
 .floaty-text .row .text-block {
   max-width: 360px;
   padding: 32px 24px;
@@ -482,6 +541,7 @@ article {
   bottom: 0;
   background: white;
 }
+
 .floaty-text .row img {
   max-width: 800px;
   max-height: 496px;
@@ -492,10 +552,12 @@ article {
 .right-hand-text .row {
   max-width: unset;
 }
+
 .right-hand-text .row .text-block {
   left: unset !important;
   right: 0 !important;
 }
+
 .right-hand-text .row img {
   margin-right: auto !important;
   margin-left: unset !important;
@@ -509,19 +571,23 @@ article {
   overflow: hidden;
   margin-bottom: 20px;
 }
+
 .post-content .post-text {
   color: black;
   text-align: left;
 }
+
 .post-content .post-image {
   position: relative;
 }
+
 .post-content .post-image::after {
   position: absolute;
-  content: "";
+  content: '';
   height: 100%;
   width: 100%;
 }
+
 .post-content .post-image img {
   width: 100%;
   max-width: 362px;
@@ -535,14 +601,17 @@ button.owl-dot {
 }
 
 .card-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.2))), url("https://i1.wp.com/handluggageonly.co.uk/wp-content/uploads/2015/05/IMG_2813-s.jpg?w=1600&ssl=1");
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("https://i1.wp.com/handluggageonly.co.uk/wp-content/uploads/2015/05/IMG_2813-s.jpg?w=1600&ssl=1");
 }
 
 .card-2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.2))), url("https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1");
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1");
 }
 
 .card-3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.2))), url("https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/03/Positano-Weather.jpg?w=1600&ssl=1");
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/03/Positano-Weather.jpg?w=1600&ssl=1");
 }
 
@@ -555,22 +624,27 @@ button.owl-dot {
   border-radius: 5px;
   margin-bottom: 20px;
 }
+
 .card .card-user {
   position: absolute;
   right: 10px;
   top: 10px;
 }
+
 .card .card-description {
   position: absolute;
   bottom: 10px;
   left: 10px;
 }
+
 .card .card-description h2 {
   font-size: 22px;
 }
+
 .card .card-description p {
   font-size: 15px;
 }
+
 .card .card-link {
   position: absolute;
   top: 0;
@@ -580,16 +654,20 @@ button.owl-dot {
   background: black;
   opacity: 0;
 }
+
 .card .card-link:hover {
   opacity: 0.1;
 }
+
 .card .features img {
   width: 100px;
 }
+
 .card .features h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
+
 .card .features p {
   font-size: 15px;
   font-weight: lighter;
@@ -617,6 +695,7 @@ button.owl-dot {
   border-left: 0;
   border-right: 0;
 }
+
 .faq .accordion-item .accordion-button {
   color: #121214;
 }
@@ -624,9 +703,11 @@ button.owl-dot {
 .carbon-free-drive {
   padding-top: 200px;
 }
+
 .carbon-free-drive .right-column {
   position: relative;
 }
+
 .carbon-free-drive .right-column::after {
   content: "";
   height: 100%;
@@ -637,10 +718,13 @@ button.owl-dot {
   top: -101px;
   z-index: -1;
 }
+
 .carbon-free-drive .right-column .section-heading {
   font-size: 6em;
-  transform: translateX(-147px);
+  -webkit-transform: translateX(-147px);
+          transform: translateX(-147px);
 }
+
 .carbon-free-drive .right-column p {
   mix-blend-mode: difference;
   margin-left: -100px;
@@ -650,20 +734,28 @@ button.owl-dot {
 
 .searchFilterBar {
   background: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   left: 0;
   padding: 10px;
+  position: -webkit-sticky;
   position: sticky;
   right: 0;
   top: 0;
   z-index: 99;
   padding: 15px 0;
 }
+
 .searchFilterBar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
 }
+
 .searchFilterBar li {
   border: 1px solid #e7e7e8;
   border-radius: 8px;
@@ -690,7 +782,8 @@ button.owl-dot {
 .search-bar {
   border-radius: 10rem;
   background: #fff;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   max-width: 940px;
   margin: auto;
   position: absolute;
@@ -740,7 +833,8 @@ button.owl-dot {
     width: calc(100% - 4rem);
     height: 1px;
     content: "";
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     background: #dee2e6;
     position: absolute;
     top: auto;
@@ -749,17 +843,19 @@ button.owl-dot {
     left: 50%;
   }
   .search-bar .form-control {
-    height: calc(1.6em + 0.75rem + 2px);
+    height: calc(1.6em + .75rem + 2px);
     padding: 10px 20px;
   }
   .search-bar .input-label-absolute-right .label-absolute {
     right: 1rem;
   }
 }
+
 .label-absolute {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: #222222;
   right: 0;
 }
@@ -776,4 +872,5 @@ button.gm-control-active.gm-fullscreen-control {
 
 .gmnoprint {
   display: none;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
